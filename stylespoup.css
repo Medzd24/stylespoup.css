@@ -1,0 +1,44 @@
+#custom-alert {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    font-family: Arial;
+    display: none;
+    
+    border-radius: 10px;
+  
+}
+
+        #custom-alert .notification {
+            position: relative;
+            display: inline-block;
+        }
+
+        #custom-alert .badge {
+            background: #DC2626;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -20px;
+            right: -30px;
+        }
+
+        #custom-alert .content {
+            margin-left: 0px;
+            display: inline-block;
+        }
+
+        #custom-alert .title {
+            font-weight: bold;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'Changa', sans-serif;
+        }
