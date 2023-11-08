@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 setInterval(() => {
                     alert.style.background = colors[colorIndex];
                     colorIndex = (colorIndex + 1) % colors.length;
-                }, 2000);
+                }, 14000);
                 setTimeout(() => {
                     alert.style.display = 'block';
                 }, 14000);
