@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 2000);
                 setTimeout(() => {
                     alert.style.display = 'block';
-                }, 8000);
+                }, 14000);
             }
         });
