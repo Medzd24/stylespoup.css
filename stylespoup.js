@@ -1,14 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
-            if (window.location === window.parent.location) {
-                let alert = document.querySelector('#custom-alert');
-                let colors = ['#DC2626', '#0077B6', '#00A7E1'];
-                let colorIndex = 0;
-                setInterval(() => {
-                    alert.style.background = colors[colorIndex];
-                    colorIndex = (colorIndex + 1) % colors.length;
-                }, 14000);
-                setTimeout(() => {
-                    alert.style.display = 'block';
-                }, 14000);
+const popupElement = document.getElementById("popup");
+    const countdownElement = document.getElementById("countdown");
+    const closeButton = document.getElementById("close-button");
+    setTimeout(function() {
+        popupElement.style.display = "block";
+
+        let countdown = 5;
+        countdownElement.textContent = countdown;
+
+        const countdownInterval = setInterval(function () {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(countdownInterval);
+                countdownElement.style.display = "none"; 
+
+                closeButton.style.display = "block";
+
             }
-        });
+        }, 1000);
+    }, 5000);
+
+
+    closeButton.addEventListener("click", function () {
+        popupElement.style.display = "none";
+        clearInterval(countdownInterval); 
+    });
