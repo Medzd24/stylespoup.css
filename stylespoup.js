@@ -4,7 +4,7 @@ const popupElement = document.getElementById("popup");
     setTimeout(function() {
         popupElement.style.display = "block";
 
-        let countdown = 5;
+        let countdown = 8;
         countdownElement.textContent = countdown;
 
         const countdownInterval = setInterval(function () {
